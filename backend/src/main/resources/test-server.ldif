@@ -1,0 +1,115 @@
+dn: dc=springframework,dc=org
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: springframework
+
+dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=ben,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: benjamin
+sn: ferguson
+uid: ben
+mail: ben@gmail.com
+userPassword: $2a$12$f5GkxJAQpqZIJZFuDHCjfef47yoW8QyrQ2o1t5/goEOohaYWCvGLu
+
+dn: uid=joe,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: joseph
+sn: smith
+uid: joe
+mail: joe@gmail.com
+userPassword: $2a$12$b6kiXrbuCiybt.S8o.ulTuzDioWGkmdLqT1RaAb3T.Bp.XbhBuHYi
+
+dn: uid=ali,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: alicia
+sn: johnson
+uid: ali
+mail: ali@gmail.com
+userPassword: $2a$12$SnPm3QIGsBWLlfVXUi9P2uLZaxAy.kcVY11LFofK9zlTx29Fmay/m
+
+dn: uid=red,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: redford
+sn: thomas
+uid: red
+mail: red@gmail.com
+userPassword: $2a$12$lCkrmNiG4f4V5BhhID0zpuXC2LVxhbqndt6MA2qygZgUtjyPEZXi6
+
+
+dn: uid=foe,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: farell
+sn: williams
+uid: foe
+mail: foe@gmail.com
+userPassword: $2a$12$BSBSGGGpG.LcfcnO9PuGo.4UxWoy8y9lfDwv7yEs6TwsxvGjPRnK.
+
+
+dn: uid=bob,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Bobrick
+sn: Hamilton
+uid: bob
+userPassword: $2a$12$vrDxBWLhxTQl1oUAcguI7uQx3qOT6YX7LzpPZsIRxPBrLA6YWeSB6
+
+dn: cn=users,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: users
+ou: user
+uniqueMember: uid=ben,ou=people,dc=springframework,dc=org
+uniqueMember: uid=joe,ou=people,dc=springframework,dc=org
+uniqueMember: uid=ali,ou=people,dc=springframework,dc=org
+uniqueMember: uid=red,ou=people,dc=springframework,dc=org
+uniqueMember: uid=foe,ou=people,dc=springframework,dc=org
+
+dn: cn=mentees,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: mentees
+ou: admin
+uniqueMember: uid=bob,ou=people,dc=springframework,dc=org
+
+dn: cn=mentors,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: mentors
+ou: admin
+uniqueMember: uid=bob,ou=people,dc=springframework,dc=org
+
+
+dn: cn=admins,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admins
+ou: admin
+uniqueMember: uid=bob,ou=people,dc=springframework,dc=org

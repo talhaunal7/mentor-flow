@@ -1,0 +1,41 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: mentor-backend
+  datasource:
+    url: jdbc:postgresql://${POSTGRESQL_HOST:localhost}:5432/mentor-db
+    username: ${POSTGRESQL_USER:postgres}
+    password: ${POSTGRESQL_PASSWORD:tunalcasepw}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
+      url: ldap://localhost:8389/
+  elasticsearch:
+    uris: ${ELASTICSEARCH_HOST:localhost}
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: cazmixdev@gmail.com
+    password: ocpf rush eojb juzo
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: true
+            auth: true
+
+
+app:
+  googleClientId: 671060896014-03vuf3va23l4ede6jgfe3894db6mn5nv.apps.googleusercontent.com
+  jwtSecret: JWTSuperSecretKey
+  jwtExpirationInMs: 3600000
+  jwtExpirationInMsForRememberMe: 2592000
