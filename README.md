@@ -20,7 +20,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 * The mentorship process is managed in phases, with evaluations at the end of each phase, and automated email reminders for phase deadlines.
 
 ### Technologies Used
-
+![java](https://badges.aleen42.com/src/java.svg) ![react](https://badges.aleen42.com/src/react.svg)
 > ### Backend
 > [Spring Boot](https://spring.io/projects/spring-boot) -
 > [Spring Security](https://spring.io/projects/spring-security) -
@@ -38,8 +38,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 
 ## API Endpoints
 
-<details>
-  <summary><strong>/auth</strong></summary>
+### /auth
 
 | Endpoint                  | Method | Description                              |
 |---------------------------|--------|------------------------------------------|
@@ -48,10 +47,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 | `/api/verify-token`       | GET    | Verify the validity of the token         |
 | `/api/logout`             | POST   | Logout the current user                  |
 
-</details>
-
-<details>
-  <summary><strong>/mentors</strong></summary>
+### /mentors
 
 | Endpoint                                              | Method | Description                                    |
 |-------------------------------------------------------|--------|------------------------------------------------|
@@ -62,10 +58,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 | `/api/mentors/{id}/status`                            | POST   | Change mentor status (approve/reject)          |
 | `/api/mentors/search?topicId=5&subtopicIds=1,3`       | GET    | Search mentors by topic and subtopics          |
 
-</details>
-
-<details>
-  <summary><strong>/mentorships</strong></summary>
+### /mentorships
 
 | Endpoint                                              | Method | Description                                    |
 |-------------------------------------------------------|--------|------------------------------------------------|
@@ -74,10 +67,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 | `/api/mentorships/mentor-processes`                   | GET    | Get mentor processes                           |
 | `/api/mentorships/mentee-processes`                   | GET    | Get mentee processes                           |
 
-</details>
-
-<details>
-  <summary><strong>/topics & /subtopics</strong></summary>
+### /topics & /subtopics
 
 | Endpoint                                              | Method | Description                                    |
 |-------------------------------------------------------|--------|------------------------------------------------|
@@ -86,10 +76,7 @@ The project is a mentorship platform connecting users to offer or receive mentor
 | `/api/subtopics/{id}`                                 | GET    | Get subtopics by topic ID                      |
 | `/api/subtopics`                                      | POST   | Create a new subtopic                          |
 
-</details>
-
-<details>
-  <summary><strong>/phases</strong></summary>
+### /phases
 
 | Endpoint                                              | Method | Description                                    |
 |-------------------------------------------------------|--------|------------------------------------------------|
@@ -97,10 +84,13 @@ The project is a mentorship platform connecting users to offer or receive mentor
 | `/api/phases/{id}`                                    | GET    | Get phases by mentorship ID                    |
 | `/api/phases/{id}/completion`                         | PUT    | Complete a phase                               |
 
-</details>
+<br>
 
+## Database Diagram
 
 ![image](./images/diagram.png)
+
+## Website
 ![image](./images/4.png)
 ![image](./images/3.png)
 ![image](./images/1.png)
